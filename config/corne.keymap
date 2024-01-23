@@ -10,14 +10,12 @@
 
 / {
         chosen {
-                zmk,battery = &vbatt;
-                
+            zmk,battery = &vbatt;
         };
         vbatt:vbatt {compatible = "zmk, battery-voltage-divider";label = "BATTERY";
         io-channels = <&adc 2>;
         output-ohms =<2000000>:
         full-ohms = <(2000000 +806000)>;
-        pintopin compatible promicro;
         keymap {
                 compatible = "zmk,keymap";
 
